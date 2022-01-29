@@ -1,18 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/black_carbon"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A1E1F5FE"
+        android:layout_marginTop="@dimen/margin_top_ten_dp"
+        android:textSize="@dimen/text_size"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A1E1F5FE"
+        android:layout_marginTop="@dimen/margin_top_ten_dp"
+        android:textSize="@dimen/text_size"/>
+
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="@dimen/margin_top_ten_dp"
+        android:columnCount="4"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:backgroundTint="#E1F5FE"
+            android:layout_columnSpan="3"
+            android:text="@string/_settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_buttons"/>
+
+        <Button
+            android:text="@string/_history"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_one"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_two"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_three"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/delete_button"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_four"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_five"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_six"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/_reset"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_seven"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_eight"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_nine"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/_minus"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/_dot"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/number_zero"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+
+        <Button
+            android:text="@string/_percent"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/_plus"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/_equal"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/_multiplication"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+        <Button
+            android:text="@string/_division"
+            android:textSize="@dimen/text_size_buttons"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1F5FE"/>
+
+
+
+    </GridLayout>
+
+
+
+
+
+</LinearLayout>
