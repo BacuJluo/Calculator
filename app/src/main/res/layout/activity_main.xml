@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,165 +9,381 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#A1E1F5FE"
-        android:layout_marginTop="@dimen/margin_top_ten_dp"
-        android:textSize="@dimen/text_size"/>
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#A1E1F5FE"
-        android:layout_marginTop="@dimen/margin_top_ten_dp"
-        android:textSize="@dimen/text_size"/>
-
-    <GridLayout
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_top_ten_dp"
-        android:columnCount="4"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
 
-        <Button
-            android:backgroundTint="#E1F5FE"
-            android:layout_columnSpan="3"
-            android:text="@string/_settings"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size_buttons"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
-        <Button
-            android:text="@string/_history"
-            android:textAllCaps="false"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
 
-        <Button
-            android:text="@string/number_one"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
 
-        <Button
-            android:text="@string/number_two"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
 
-        <Button
-            android:text="@string/number_three"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorEight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
 
-        <Button
-            android:text="@string/delete_button"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
-        <Button
-            android:text="@string/number_four"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
 
-        <Button
-            android:text="@string/number_five"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
 
-        <Button
-            android:text="@string/number_six"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
-        <Button
-            android:text="@string/_reset"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/number_seven"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/number_eight"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/number_nine"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/_minus"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/_dot"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/number_zero"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorSeven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
 
 
-        <Button
-            android:text="@string/_percent"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/_plus"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/_equal"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:layout_columnSpan="2"
-            android:layout_gravity="fill"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/_multiplication"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
-
-        <Button
-            android:text="@string/_division"
-            android:textSize="@dimen/text_size_buttons"
-            android:textColor="@color/black"
-            android:backgroundTint="#E1F5FE"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A1E1F5FE"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorOne" />
 
 
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/appCompatEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A1E1F5FE"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorEight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorTwo" />
 
-    </GridLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/_history"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorThree"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorTwo"
+        app:layout_constraintVertical_bias="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_two"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorFive"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorFour" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/_percent"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorFour"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorThree" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_six"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorSix"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorFive" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonSeven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_seven"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorSeven"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorSix" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/_settings"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorFour"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorThree" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonMultiplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/_multiplication"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorSix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorFive" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_five"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorSix"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorFive" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/_division"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorFive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorFour" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#A9FF0000"
+        android:text="@string/_reset"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorFour"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorThree" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_one"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorFive"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorFour" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_four"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorSix"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorFive" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/_plus"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorSeven"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorSix" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonEight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_eight"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorSeven"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorSix" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/_minus"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorSeven" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_three"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorFive"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorFour" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/_equal"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorSeven" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/_dot"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorSeven" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonNine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_nine"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorSeven"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertTwo"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorSix" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/delete_button"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineVertThree"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorThree" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E1F5FE"
+        android:text="@string/number_zero"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertOne"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorSeven" />
 
 
-
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
