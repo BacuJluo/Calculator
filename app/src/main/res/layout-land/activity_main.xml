@@ -87,8 +87,8 @@
         app:layout_constraintGuide_percent="0.9" />
 
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#A1E1F5FE"
@@ -97,18 +97,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorOne" />
-
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/appCompatEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#A1E1F5FE"
-        android:textSize="@dimen/text_size"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineHorEight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorTwo" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/materialButtonHistory"
