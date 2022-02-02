@@ -1,8 +1,9 @@
 package com.example.calculator;
 
-import androidx.annotation.IntRange;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class Calculator {
+public class Calculator implements Parcelable {
 
     private int firstArg;
     private int secondArg;
@@ -13,6 +14,38 @@ public class Calculator {
     private int actionSelected;
 
     private State state;
+
+    protected Calculator(Parcel in) {
+        firstArg = in.readInt();
+        secondArg = in.readInt();
+        countNumbers = in.readInt();
+        actionSelected = in.readInt();
+    }
+
+    public static final Creator<Calculator> CREATOR = new Creator<Calculator>() {
+        @Override
+        public Calculator createFromParcel(Parcel in) {
+            return new Calculator(in);
+        }
+
+        @Override
+        public Calculator[] newArray(int size) {
+            return new Calculator[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(firstArg);
+        dest.writeInt(secondArg);
+        dest.writeInt(countNumbers);
+        dest.writeInt(actionSelected);
+    }
 
     private enum State {
         firstArgInput,
@@ -74,6 +107,8 @@ public class Calculator {
                     inputStr.append("9");
                     break;
                 }
+                default:
+                    throw new IllegalStateException("Unexpected value: " + buttonId);
             }
         }
 
