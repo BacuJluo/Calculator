@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/black_carbon"
+    android:gravity="center|start"
+    android:orientation="vertical"
+    android:theme="@style/myTheme">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        style="@style/myFirstStyle"
+        android:id="@+id/CheckBoxTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_top_ten_dp"
+        android:text="@string/green_theme"
+        android:textAlignment="textEnd"
+        android:textColor="@color/green_theme_color"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        style="@style/myFirstStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_top_ten_dp"
+        android:text="@string/dark_theme"
+        android:textAlignment="textEnd"
+        android:textColor="@color/dark_theme"/>
+
+</LinearLayout>

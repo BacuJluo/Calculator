@@ -13,4 +13,20 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="myTheme" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/green_theme_color</item>
+        <item name="colorPrimaryDark">@color/green_dark_theme</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="fontFamily">@font/akronim</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="myDarkTheme" parent="Theme.Calculator">
+        <item name="colorPrimary">@color/dark_theme</item>
+        <item name="colorPrimaryDark">@color/dark_theme_night</item>
+        <item name="android:textSize">@dimen/text_size_for_landscape</item>
+        <item name="fontFamily">@font/akronim</item>
+        <item name="android:textStyle">italic</item>
+    </style>
 </resources>

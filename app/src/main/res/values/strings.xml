@@ -24,4 +24,6 @@
     <string name="_settings">...</string>
     <string name="_history">His</string>
     <string name="_equal">=</string>
+    <string name="green_theme">Green theme</string>
+    <string name="dark_theme">Dark Theme</string>
 </resources>

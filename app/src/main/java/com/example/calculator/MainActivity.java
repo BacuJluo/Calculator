@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity{
 
     private Calculator calculator;
     private TextView tv;
+    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity{
         };
 
         tv = findViewById(R.id.materialTextView);
+        btn = findViewById(R.id.materialButtonSettings);
 
         int[] numberIds = new int[]{
                 R.id.materialButtonZero,

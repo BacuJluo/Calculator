@@ -6,5 +6,6 @@
     <dimen name="text_size_buttons">20sp</dimen>
     <dimen name="text_size_buttons_land">15sp</dimen>
     <dimen name="size_text_view">200dp</dimen>
+    <dimen name="text_size_from_style">40sp</dimen>
 
 </resources>
