@@ -1,16 +1,18 @@
 package com.example.calculator;
 
 
+import static com.example.calculator.SettingsActivity.KEY_INTENT;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     private Calculator calculator;
     private TextView tv;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        setTheme(); //нужно доделать
         setContentView(R.layout.activity_main);
         initCalculator();
     }
@@ -57,6 +60,17 @@ public class MainActivity extends AppCompatActivity{
 
         tv = findViewById(R.id.materialTextView);
         btn = findViewById(R.id.materialButtonSettings);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                Bundle extras = getIntent().getExtras();
+                //extras.getParcelable(KEY_INTENT);// доделать передачу данных со второй активити
+                startActivity(intent);
+
+            }
+        });
+
 
         int[] numberIds = new int[]{
                 R.id.materialButtonZero,
@@ -89,4 +103,9 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    @Override
+    public void setTheme(int resId) {
+        super.setTheme(resId);
+
+    }
 }

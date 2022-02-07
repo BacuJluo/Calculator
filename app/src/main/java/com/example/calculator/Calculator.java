@@ -12,6 +12,7 @@ public class Calculator implements Parcelable {
     private int firstArg;
     private int secondArg;
     private int countNumbers = 9;
+    Button btnSettings;
 
     private StringBuilder inputStr = new StringBuilder();
 
@@ -141,11 +142,7 @@ public class Calculator implements Parcelable {
         } else if (actionId == R.id.materialButtonReset && inputStr.length() > 0) {
             state = State.firstArgInput;
             inputStr.setLength(0);
-            switch (actionSelected) {
-                case R.id.materialButtonReset:
-                    actionSelected = R.id.materialButtonReset;
-                    break;
-            }
+            actionSelected = R.id.materialButtonReset;
         } else if(inputStr.length() > 0 && state == State.firstArgInput){
             firstArg = Integer.parseInt(inputStr.toString());
             state = State.secondArgInput;
