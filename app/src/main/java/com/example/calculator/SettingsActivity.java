@@ -16,7 +16,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     private static final String PREF_NAME = "key_preference";
     private static final String PREF_THEME_KEY = "key_preference_theme";
-    public static final String KEY_INTENT = "key_intent_theme";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,8 +42,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         }
         //передача из этой активити в основную
         Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
-        intent.putExtra(KEY_INTENT, getAppTheme());
-        recreate();
+        intent.putExtra(MainActivity.KEY_INTENT_THEME_FROM_SECOND_TO_MAIN, getAppTheme());
+        SettingsActivity.this.setResult(RESULT_OK,intent);
+        finish();
     }
 
     private void setAppTheme(int codeStyle) {

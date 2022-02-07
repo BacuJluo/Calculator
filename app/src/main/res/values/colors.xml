@@ -12,4 +12,7 @@
     <color name="green_dark_theme">#167006</color>
     <color name="dark_theme">#7B0ADF</color>
     <color name="dark_theme_night">#350460</color>
+    <color name="background_tint_for_buttons">#E1F5FE</color>
+    <color name="background_text_wiew">#A1E1F5FE</color>
+    <color name="red_button_clear">#A9FF0000</color>
 </resources>

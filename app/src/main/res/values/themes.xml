@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColor">@color/black</item>
         <!-- Secondary brand color. -->
 <!--        <item name="colorSecondary">@color/teal_200</item>-->
         <item name="colorSecondaryVariant">@color/teal_700</item>
@@ -15,7 +16,10 @@
     </style>
 
     <style name="myTheme" parent="Theme.Calculator">
+        <item name="android:navigationBarColor">@color/green_theme_color</item>
         <item name="colorPrimary">@color/green_theme_color</item>
+        <item name="colorPrimaryContainer">@color/green_dark_theme</item>
+        <item name="colorOnPrimaryContainer">@color/green_dark_theme</item>
         <item name="colorPrimaryDark">@color/green_dark_theme</item>
         <item name="colorAccent">@color/green_theme_color</item>
         <item name="fontFamily">@font/akronim</item>
@@ -26,8 +30,16 @@
         <item name="colorPrimary">@color/dark_theme</item>
         <item name="colorPrimaryDark">@color/dark_theme_night</item>
         <item name="colorAccent">@color/dark_theme</item>
-        <item name="android:textSize">@dimen/text_size_for_landscape</item>
         <item name="fontFamily">@font/akronim</item>
         <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/green_dark_theme</item>
+    </style>
+
+    <style name="myButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/akronim</item>
+        <item name="android:textSize">@dimen/text_size_for_landscape</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/green_theme_color</item>
     </style>
 </resources>

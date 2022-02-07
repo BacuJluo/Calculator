@@ -1,8 +1,5 @@
 package com.example.calculator;
 
-
-import static com.example.calculator.SettingsActivity.KEY_INTENT;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private Calculator calculator;
     private TextView tv;
     private Button btn;
+    public static int REQUEST_CODE = 999;
+    public static String KEY_INTENT_THEME_FROM_SECOND_TO_MAIN = "key1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                Bundle extras = getIntent().getExtras();
-                //extras.getParcelable(KEY_INTENT);// доделать передачу данных со второй активити
-                startActivity(intent);
+                //Bundle extras = getIntent().getExtras();
+                startActivityForResult(intent,REQUEST_CODE);
+                //startActivity(intent);
 
             }
         });
@@ -104,8 +104,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void setTheme(int resId) {
-        super.setTheme(resId);
-
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==REQUEST_CODE&&resultCode==RESULT_OK){
+            if(data.getExtras()!=null){
+                data.getIntExtra(KEY_INTENT_THEME_FROM_SECOND_TO_MAIN, R.style.Theme_Calculator);
+            }
+            setTheme(data.getIntExtra(KEY_INTENT_THEME_FROM_SECOND_TO_MAIN, R.style.Theme_Calculator));
+            recreate();
+        }
     }
+
 }
