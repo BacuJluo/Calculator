@@ -19,9 +19,15 @@ public class MainActivity extends AppCompatActivity {
     public static int REQUEST_CODE = 999;
     public static String KEY_INTENT_THEME_FROM_SECOND_TO_MAIN = "key1";
 
+    private static final String PREF_NAME1 = "key_preference";
+    private static final String PREF_THEME_KEY1 = "key_preference_theme";
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme());
         setContentView(R.layout.activity_main);
         initCalculator();
     }
@@ -106,11 +112,16 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode==REQUEST_CODE&&resultCode==RESULT_OK){
             if(data.getExtras()!=null){
                 data.getIntExtra(KEY_INTENT_THEME_FROM_SECOND_TO_MAIN, R.style.Theme_Calculator);
-
             }
-            setTheme(data.getIntExtra(KEY_INTENT_THEME_FROM_SECOND_TO_MAIN, R.style.Theme_Calculator));
             recreate();
         }
     }
+
+    private int getAppTheme(){
+        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME1, MODE_PRIVATE);
+        return sharedPref.getInt(PREF_THEME_KEY1, R.style.Theme_Calculator);
+    }
+
+
 
 }
