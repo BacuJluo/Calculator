@@ -31,8 +31,9 @@
         <item name="colorPrimary">@color/dark_theme</item>
         <item name="colorPrimaryDark">@color/dark_theme_night</item>
         <item name="colorAccent">@color/dark_theme</item>
-        <item name="fontFamily">@font/akronim</item>
+        <item name="fontFamily">sans-serif-condensed</item>
         <item name="android:textStyle">italic</item>
+        <item name="android:textSize">@dimen/text_size</item>
         <item name="android:textColor">@color/green_dark_theme</item>
     </style>
 

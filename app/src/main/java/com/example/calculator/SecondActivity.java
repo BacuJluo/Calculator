@@ -19,7 +19,7 @@ public class SecondActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent("myAction");
+                Intent intent = new Intent("android.intent.action.myAction");
                 startActivity(intent);
                 finish();
             }
