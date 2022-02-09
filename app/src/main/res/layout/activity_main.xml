@@ -103,6 +103,7 @@
         android:id="@+id/materialButtonHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/background_tint_for_buttons"
         android:text="@string/_history"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/guidelineHorThree"

@@ -1,6 +1,7 @@
 package com.example.calculator;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setTheme(); //нужно доделать
         setContentView(R.layout.activity_main);
         initCalculator();
     }
@@ -64,10 +64,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                //Bundle extras = getIntent().getExtras();
                 startActivityForResult(intent,REQUEST_CODE);
-                //startActivity(intent);
-
             }
         });
 
@@ -109,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode==REQUEST_CODE&&resultCode==RESULT_OK){
             if(data.getExtras()!=null){
                 data.getIntExtra(KEY_INTENT_THEME_FROM_SECOND_TO_MAIN, R.style.Theme_Calculator);
+
             }
             setTheme(data.getIntExtra(KEY_INTENT_THEME_FROM_SECOND_TO_MAIN, R.style.Theme_Calculator));
             recreate();

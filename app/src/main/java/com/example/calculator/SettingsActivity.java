@@ -10,23 +10,17 @@ import android.view.View;
 import android.widget.RadioButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
-
     private static final String PREF_NAME = "key_preference";
     private static final String PREF_THEME_KEY = "key_preference_theme";
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(getAppTheme());
         setContentView(R.layout.activity_settings);
-
         ((RadioButton) findViewById(R.id.GreenTheme)).setOnClickListener(this);
         ((RadioButton) findViewById(R.id.DarkTheme)).setOnClickListener(this);
     }
-
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
@@ -46,9 +40,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         SettingsActivity.this.setResult(RESULT_OK,intent);
         finish();
     }
-
     private void setAppTheme(int codeStyle) {
-        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        SharedPreferences sharedPref =getSharedPreferences(PREF_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(PREF_THEME_KEY, codeStyle);
         editor.apply();
